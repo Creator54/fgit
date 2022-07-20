@@ -32,10 +32,11 @@ function fgit
     mv $subdir ../ #move requested dir to current dir
     rm -rf ../$dirname #remove useless repo
   end
+  cd ..
 end
 ```
 
-## Bash/ZSH
+## Bash
 ```Bash
 function fgit() {
   if echo $1| grep "git@" &>/dev/null;then
@@ -58,6 +59,6 @@ function fgit() {
     mv $subdir ../ #move requested dir to current dir
     rm -rf ../$dirname #remove useless repo
   fi
+  cd ..
 }
-fgit $1
 ```
