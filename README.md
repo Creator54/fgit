@@ -18,7 +18,7 @@ function fgit
   if [ -z $argv[1] ]
     echo "usage: fgit https://github.com/repo_owner/repo_name"
   else
-    git clone --filter=blob:none --no-checkout --depth 1 --sparse $argv[1]
+    git clone --filter=blob:none --no-checkout --depth 1 --sparse $argv[1] &>/dev/null
     cd $dirname
     git sparse-checkout init --cone
     echo
@@ -44,7 +44,7 @@ function fgit() {
   if [ -z $1 ]; then
     echo "usage: fgit https://github.com/repo_owner/repo_name"
   else
-    git clone --filter=blob:none --no-checkout --depth 1 --sparse $1
+    git clone --filter=blob:none --no-checkout --depth 1 --sparse $1 &>/dev/null
     cd $dirname
     git sparse-checkout init --cone
     echo
