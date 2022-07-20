@@ -6,6 +6,9 @@
 # Why ??
 for fetching sub-directories of a large git repo without cloning the whole repo itself.
 
+## Preview
+![Preview](./preview.gif)
+
 ## Fish
 ```Fish
 function fgit
